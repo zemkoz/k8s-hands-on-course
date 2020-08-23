@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+  labels: # These labels will be used in service for selecting the pod.
+    app: webapp
+    release: '0'
+spec:
+  containers:
+  - name: webapp
+    image: richardchesterwood/k8s-fleetman-webapp-angular:release0
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-release-0-5
+  labels: # These labels will be used in service for selecting the pod.
+    app: webapp
+    release: '0-5'
+spec:
+  containers:
+    - name: webapp
+      image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+
