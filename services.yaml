@@ -5,7 +5,6 @@ metadata:
 spec:
   selector: # The key-value pairs of the target pod's label.
     app: webapp
-    release: '0-5'
   ports:
   - name: http
     port: 80
