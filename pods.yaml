@@ -1,8 +1,9 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name: webapp
 spec:
+  minReadySeconds: 10
   selector:
     matchLabels:
       app: webapp
